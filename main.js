@@ -72,9 +72,9 @@ class BowlingGame {
         frame.score = frame.rolls.reduce((acc, pins) => acc + pins, 0);
 
         if (frameIndex < 9) {
-          if (frame.rolls[0] === 10) {  // Strike
+          if (frame.rolls[0] === 10) {
             frame.score += this.getStrikeBonus(player, frameIndex);
-          } else if (frame.rolls[0] + frame.rolls[1] === 10) {  // Spare
+          } else if (frame.rolls[0] + frame.rolls[1] === 10) {
             frame.score += this.getSpareBonus(player, frameIndex);
           }
         }
